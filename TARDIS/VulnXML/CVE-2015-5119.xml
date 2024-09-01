@@ -1,0 +1,353 @@
+<stix:STIX_Package 
+	xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1"
+	xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:clownbutt="http://clownbutt.net"
+	xmlns:et="http://stix.mitre.org/ExploitTarget-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:marking="http://data-marking.mitre.org/Marking-1"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:ProductObj="http://cybox.mitre.org/objects#ProductObject-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	 id="clownbutt:Package-011c5d04-315b-4cbe-9e99-6a68dae39b27" version="1.2">
+    <stix:STIX_Header>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>../../../../descendant-or-self::node() | ../../../../descendant-or-self::node()/@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type='tlpMarking:TLPMarkingStructureType' color="WHITE"/>
+                <marking:Marking_Structure xsi:type='simpleMarking:SimpleMarkingStructureType'>
+                    <simpleMarking:Statement>This information may be distributed without restriction.</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+    </stix:STIX_Header>
+    <stix:Exploit_Targets>
+        <stixCommon:Exploit_Target id="clownbutt:et-21820705-857c-4195-aa7a-c7d38f87bc53" timestamp="2016-09-25T20:41:52.885347Z" xsi:type='et:ExploitTargetType'>
+            <et:Title>CVE-2015-5119</et:Title>
+            <et:Description>Use-after-free vulnerability in the ByteArray class in the ActionScript 3 (AS3) implementation in Adobe Flash Player 13.x through 13.0.0.296 and 14.x through 18.0.0.194 on Windows and OS X and 11.x through 11.2.202.468 on Linux allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted Flash content that overrides a ValueOf function, as exploited in the wild in July 2015.</et:Description>
+            <et:Vulnerability is_known="true">
+                <et:Title>CVE-2015-5119</et:Title>
+                <et:Description>Use-after-free vulnerability in the ByteArray class in the ActionScript 3 (AS3) implementation in Adobe Flash Player 13.x through 13.0.0.296 and 14.x through 18.0.0.194 on Windows and OS X and 11.x through 11.2.202.468 on Linux allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted Flash content that overrides a ValueOf function, as exploited in the wild in July 2015.</et:Description>
+                <et:CVE_ID>CVE-2015-5119</et:CVE_ID>
+                <et:Source>https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-5119</et:Source>
+                <et:CVSS_Score>
+<et:Overall_Score>10.0</et:Overall_Score>
+                </et:CVSS_Score>
+                <et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-c49f000b-4321-4e39-9d78-e7d96ad3319c">
+                            <cybox:Title>Product: Adobe Flash Player 13.0.0.292</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-c0369b31-f066-4752-b4eb-a5f71580800d">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 13.0.0.292</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>13.0.0.292</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-143ef06a-a72b-40ac-a6ba-37aa6473bc16">
+                            <cybox:Title>Product: Adobe Flash Player 14.0.0.125</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-4aa021b3-984f-46f6-acd9-e9e44e577d1d">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 14.0.0.125</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>14.0.0.125</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-51b304c3-9d4d-4205-a5b1-d60276d75e22">
+                            <cybox:Title>Product: Adobe Flash Player 14.0.0.145</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-d0905102-3329-4214-b975-b6c8f419c251">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 14.0.0.145</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>14.0.0.145</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-4fa50132-dd49-4316-a7f0-5fd8342b12f7">
+                            <cybox:Title>Product: Adobe Flash Player 14.0.0.176</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-b4c1e3e6-eabd-4d62-bc00-e198f1ace5c4">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 14.0.0.176</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>14.0.0.176</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-4a1dd90d-3e21-44ca-954a-6e01023efd5f">
+                            <cybox:Title>Product: Adobe Flash Player 14.0.0.179</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-0f3a754b-19a1-4f6b-8daa-c1623e86ebff">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 14.0.0.179</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>14.0.0.179</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-c8908377-2b85-4c40-b505-ee69613d2f87">
+                            <cybox:Title>Product: Adobe Flash Player 15.0.0.152</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-638d4bed-a425-4ba1-a6f3-179d9d952a42">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 15.0.0.152</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>15.0.0.152</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-79e4132a-ea2d-4619-accc-add47b280489">
+                            <cybox:Title>Product: Adobe Flash Player 15.0.0.167</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-ac167f7f-1fc2-4826-9f6a-103b3462bff7">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 15.0.0.167</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>15.0.0.167</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-55512a5c-60d3-4cb7-bca8-ce4884f9ae1b">
+                            <cybox:Title>Product: Adobe Flash Player 15.0.0.189</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-e9cd2296-cbef-40be-8771-fcb131fca4be">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 15.0.0.189</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>15.0.0.189</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-1c0f1604-9bfb-4f1a-95df-3b7c6afab11e">
+                            <cybox:Title>Product: Adobe Flash Player 15.0.0.223</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-54a4bf12-621a-42fe-bb6b-77ac3e790c09">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 15.0.0.223</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>15.0.0.223</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-ac24ddb3-5cbc-4c06-8a8b-7dd9eb98c606">
+                            <cybox:Title>Product: Adobe Flash Player 15.0.0.239</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-688fa6fd-e7cc-42c8-b97d-d5b86fb883ed">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 15.0.0.239</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>15.0.0.239</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-93307bab-cd3e-4f9d-bec1-f31d56fa6c42">
+                            <cybox:Title>Product: Adobe Flash Player 15.0.0.246</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-48975e46-1d1a-4fd1-ae9e-a06b453fa49d">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 15.0.0.246</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>15.0.0.246</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-eff98518-e9e5-4338-91c9-668ae505ec68">
+                            <cybox:Title>Product: Adobe Flash Player 16.0.0.235</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-c8ff8488-50ec-4d1d-a21f-efd44c360247">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 16.0.0.235</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>16.0.0.235</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-65967953-b887-4579-a649-46efb4c13955">
+                            <cybox:Title>Product: Adobe Flash Player 16.0.0.257</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-06d8d42a-fba5-4cbd-a490-b703277c419b">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 16.0.0.257</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>16.0.0.257</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-0719ed81-7991-4e6b-9679-9bf894754521">
+                            <cybox:Title>Product: Adobe Flash Player 16.0.0.287</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-462edb2b-8344-43b0-8506-c07ccf7276fe">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 16.0.0.287</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>16.0.0.287</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-352a0b3d-1044-4453-aaf1-7f5ed8a56350">
+                            <cybox:Title>Product: Adobe Flash Player 16.0.0.296</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-7479c1a1-4b1e-44fe-a548-be1c55ffc367">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 16.0.0.296</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>16.0.0.296</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-e4675390-2dbd-4e95-9b32-71d6e0c7bb1e">
+                            <cybox:Title>Product: Adobe Flash Player 17.0.0.134</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-df10e068-4af1-4f88-87c8-97be762d1393">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 17.0.0.134</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>17.0.0.134</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-fa3f321e-919c-4a1c-9bca-b771d00ecafb">
+                            <cybox:Title>Product: Adobe Flash Player 17.0.0.169</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-af36c518-024f-41e0-82fc-c6b3aa4f1a07">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 17.0.0.169</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>17.0.0.169</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-1c8a30cf-f1fd-4e66-9511-402c9cf69bb1">
+                            <cybox:Title>Product: cpe:2.3:a:adobe:flash_player:17.0.0.188</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-35dc2bbe-ef6e-4e01-95e9-918f2e4fc10f">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>cpe:2.3:a:adobe:flash_player:17.0.0.188</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>17.0.0.188</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-030fc731-ba64-4035-965f-1593b874c6f5">
+                            <cybox:Title>Product: Adobe Flash Player 18.0.0.161</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-36398a0a-f585-4df0-931f-73afe0d2fe79">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 18.0.0.161</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>18.0.0.161</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-603d1c22-fa0e-42ef-8f69-14df1db5475a">
+                            <cybox:Title>Product: Adobe Flash Player 18.0.0.194</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-f26fb474-a4b3-409a-a9e6-a4bb7d6eb31c">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 18.0.0.194</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>18.0.0.194</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-53ba6de5-6260-4fb2-8485-d99cb91ed0ca">
+                            <cybox:Title>Product: Microsoft Windows</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-60217f4c-57e9-4781-a19c-d33bfb8a3b95">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Microsoft Windows</ProductObj:Product>
+                                    <ProductObj:Vendor>Microsoft</ProductObj:Vendor>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-f93fca57-d6bd-43d0-8b04-58cb59e566bd">
+                            <cybox:Title>Product: Apple Mac OS X</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-51317f22-daa6-45c7-a4e0-220403640c12">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Apple Mac OS X</ProductObj:Product>
+                                    <ProductObj:Vendor>Apple</ProductObj:Vendor>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-3c272f33-947c-4ec2-bdf0-a12444a91b41">
+                            <cybox:Title>Product: Adobe Flash Player 11.2.202.468</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-5c6e531a-192b-48a7-aa3d-bb2683850306">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Adobe Flash Player 11.2.202.468</ProductObj:Product>
+                                    <ProductObj:Vendor>Adobe</ProductObj:Vendor>
+                                    <ProductObj:Version>11.2.202.468</ProductObj:Version>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                    <et:Affected_Software>
+                        <stixCommon:Observable id="clownbutt:Observable-fb89642e-f586-4284-86e5-0528268ad249">
+                            <cybox:Title>Product: Linux Kernel</cybox:Title>
+                            <cybox:Object id="clownbutt:Product-929c111b-8108-404c-8b20-6ee1c009ea35">
+                                <cybox:Properties xsi:type="ProductObj:ProductObjectType">
+                                    <ProductObj:Product>Linux Kernel</ProductObj:Product>
+                                    <ProductObj:Vendor>Linux</ProductObj:Vendor>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </stixCommon:Observable>
+                    </et:Affected_Software>
+                </et:Affected_Software>
+                <et:References>
+                    <stixCommon:Reference>http://www.us-cert.gov/ncas/alerts/TA15-195A</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.kb.cert.org/vuls/id/561288</stixCommon:Reference>
+                    <stixCommon:Reference>https://helpx.adobe.com/security/products/flash-player/apsb15-16.html</stixCommon:Reference>
+                    <stixCommon:Reference>https://helpx.adobe.com/security/products/flash-player/apsa15-03.html</stixCommon:Reference>
+                    <stixCommon:Reference>https://packetstormsecurity.com/files/132600/Adobe-Flash-Player-ByteArray-Use-After-Free.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://twitter.com/w3bd3vil/statuses/618168863708962816</stixCommon:Reference>
+                    <stixCommon:Reference>http://blog.trendmicro.com/trendlabs-security-intelligence/unpatched-flash-player-flaws-more-pocs-found-in-hacking-team-leak/</stixCommon:Reference>
+                </et:References>
+            </et:Vulnerability>
+            <et:Weakness>
+                <et:CWE_ID>CWE-119</et:CWE_ID>
+            </et:Weakness>
+            <et:Potential_COAs>
+                <et:Potential_COA>
+                    <stixCommon:Course_Of_Action idref="clownbutt:coa-f5440b8a-9b60-4745-bf88-9ebd1bd8b2ad" timestamp="2016-09-25T20:41:52.885347Z" xsi:type='coa:CourseOfActionType'/>
+                </et:Potential_COA>
+            </et:Potential_COAs>
+            <et:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>National Vulnerability Database</stixCommon:Name>
+                </stixCommon:Identity>
+            </et:Information_Source>
+        </stixCommon:Exploit_Target>
+    </stix:Exploit_Targets>
+</stix:STIX_Package>
