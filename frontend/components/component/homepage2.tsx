@@ -23,12 +23,70 @@ To read more about using these font, please visit the Next.js documentation:
 - App Directory: https://nextjs.org/docs/app/building-your-application/optimizing/fonts
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
+"use client";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export function Homepage2() {
+
+  // handle submit function to localhost 8000
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const ip = formData.get("ip");
+    const file = formData.get("file");
+  
+    if (!ip || !file) {
+      console.error("IP address or file missing. Please fill in both fields.");
+      return;
+    }
+  
+    const uploadFile = async (fileData: File) => {
+      try {
+        const uploadFormData = new FormData();
+        uploadFormData.append("file", fileData);
+  
+        const uploadResponse = await fetch("http://localhost:8000/upload/", {
+          method: "POST",
+          body: uploadFormData,
+        });
+  
+        if (uploadResponse.ok) {
+          const fileString = await uploadResponse.json();
+          console.log(fileString.image_uri);
+  
+          // const parseFormData = new FormData();
+          // parseFormData.append("file", fileString.image_uri);
+  
+          const parseResponse = await fetch(
+            `http://localhost:8000/parse/?file=${fileString.image_uri}&sourceIP=${ip}`,
+            {
+              method: "POST",
+              // body: parseFormData,
+            }
+          );
+  
+          if (parseResponse.ok) {
+            const parsedData = await parseResponse.json();
+            console.log("Parsed data:", parsedData);
+            // redirect to the results page
+            window.location.href = "/results";
+          } else {
+            console.error("Parsing failed. Error message:", parseResponse.statusText);
+          }
+        } else {
+          console.error("Upload failed. Error message:", uploadResponse.statusText);
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+  
+    uploadFile(file as File);
+  }
+  
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -100,11 +158,11 @@ export function Homepage2() {
           </div>
 
           <img
-                src="https://nsfocusglobal.com/wp-content/uploads/2017/02/Threat-Analysis.jpg"
-                alt="TARDIS Features"
-                className="rounded-xl object-cover"
-                // style={{ aspectRatio: "600/400", objectFit: "cover" }}
-              />
+            src="https://nsfocusglobal.com/wp-content/uploads/2017/02/Threat-Analysis.jpg"
+            alt="TARDIS Features"
+            className="rounded-xl object-cover"
+            // style={{ aspectRatio: "600/400", objectFit: "cover" }}
+          />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
@@ -176,13 +234,18 @@ export function Homepage2() {
                 posture.
               </p>
             </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex gap-2">
-                <Input
-                  type="file"
-                  placeholder="Upload STIX file"
-                  className="max-w-lg flex-1"
-                />
+            <div className="mx-auto w-full max-w-lg space-y-2">
+              <form className="" onSubmit={handleSubmit}>
+                <div className="flex gap-2 p-2">
+                  <Input name="ip" placeholder="IP address" className="max-w-lg flex-1" />
+                  <Input
+                    name="file"
+                    type="file"
+                    placeholder="Upload STIX file"
+                    className="max-w-lg flex-1"
+                  />
+                </div>
+
                 <Button type="submit">Analyze</Button>
               </form>
             </div>
