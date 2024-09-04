@@ -43,48 +43,8 @@ export function Homepage2() {
       return;
     }
   
-    const uploadFile = async (fileData: File) => {
-      try {
-        const uploadFormData = new FormData();
-        uploadFormData.append("file", fileData);
-  
-        const uploadResponse = await fetch("http://localhost:8000/upload/", {
-          method: "POST",
-          body: uploadFormData,
-        });
-  
-        if (uploadResponse.ok) {
-          const fileString = await uploadResponse.json();
-          console.log(fileString.image_uri);
-  
-          // const parseFormData = new FormData();
-          // parseFormData.append("file", fileString.image_uri);
-  
-          const parseResponse = await fetch(
-            `http://localhost:8000/parse/?file=${fileString.image_uri}&sourceIP=${ip}`,
-            {
-              method: "POST",
-              // body: parseFormData,
-            }
-          );
-  
-          if (parseResponse.ok) {
-            const parsedData = await parseResponse.json();
-            console.log("Parsed data:", parsedData);
-            // redirect to the results page
-            window.location.href = "/results";
-          } else {
-            console.error("Parsing failed. Error message:", parseResponse.statusText);
-          }
-        } else {
-          console.error("Upload failed. Error message:", uploadResponse.statusText);
-        }
-      } catch (error) {
-        console.error("An error occurred:", error);
-      }
-    };
-  
-    uploadFile(file as File);
+    // just redirect to the results page
+    window.location.href = "/results";
   }
   
   return (
